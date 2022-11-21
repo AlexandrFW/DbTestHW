@@ -2,9 +2,17 @@
 
 public class Announcement
 {
-    public Guid UserId { get; set; }
+    public int UserId { get; set; }
 
-    public Guid CategoryId { get; set; }
+    public string UserName { get; set; } = string.Empty;
+
+    public string Email { get; set; } = string.Empty;
+
+    public string Phone { get; set; } = string.Empty;
+
+    public int CategoryId { get; set; }
+
+    public string CategoryName { get; set; } = string.Empty;
 
     public string Title { get; set; } = string.Empty;
 

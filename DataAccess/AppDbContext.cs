@@ -44,7 +44,6 @@ internal class AppDbContext : DbContext
         {
             new UserDto
             {
-                UserId = Guid.NewGuid(),
                 Name = "Иван Петров",
                 Email= "ivan.petrov@gmail.com",
                 Phone = "+79001234321",
@@ -52,7 +51,6 @@ internal class AppDbContext : DbContext
             },
             new UserDto
             {
-                UserId = Guid.NewGuid(),
                 Name = "Дмитрий Антонов",
                 Email= "dmitry.antonov@yandex.ru",
                 Phone = "+79651437391",
@@ -60,7 +58,6 @@ internal class AppDbContext : DbContext
             },
             new UserDto
             {
-                UserId = Guid.NewGuid(),
                 Name = "Анатолий Сидоров",
                 Email= "anatoly.sidorov@yandex.ru",
                 Phone = "+79013437995",
@@ -68,7 +65,6 @@ internal class AppDbContext : DbContext
             },
             new UserDto
             {
-                UserId = Guid.NewGuid(),
                 Name = "Павел Дмитриев",
                 Email= "pavel.dmitriev@gmail.com",
                 Phone = "+791275423905",
@@ -76,7 +72,6 @@ internal class AppDbContext : DbContext
             },
             new UserDto
             {
-                UserId = Guid.NewGuid(),
                 Name = "Андрей Вавилов",
                 Email= "andrey.vavilov@gmail.com",
                 Phone = "+79870091765",
@@ -88,22 +83,18 @@ internal class AppDbContext : DbContext
         {
             new CategoryDto
             {
-                CategoryId= Guid.NewGuid(),
                 CategoryName = "Недвижимость"
             },
             new CategoryDto
             {
-                CategoryId= Guid.NewGuid(),
                 CategoryName = "Автомобили"
             },
             new CategoryDto
             {
-                CategoryId= Guid.NewGuid(),
                 CategoryName = "Спорт товары"
             },
             new CategoryDto
             {
-                CategoryId= Guid.NewGuid(),
                 CategoryName = "Аудо-Видео Оборудование"
             }
         };

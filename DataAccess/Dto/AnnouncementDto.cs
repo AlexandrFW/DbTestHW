@@ -4,11 +4,11 @@ namespace DbTestHW.DataAccess.Dto;
 
 internal class AnnouncementDto
 {
-    public Guid UserId { get; set; }
+    public int UserId { get; set; }
 
     public UserDto? User { get; set; }
 
-    public Guid CategoryId { get; set; }
+    public int CategoryId { get; set; }
 
     public CategoryDto? Category { get; set; }
 
