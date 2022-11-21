@@ -1,6 +1,10 @@
-﻿namespace DbTestHW.Domain;
+﻿using Microsoft.EntityFrameworkCore;
 
-internal class Category
+namespace DbTestHW.Domain;
+
+public class Category
 {
+    public Guid CategoryId { get; set; }
 
+    public string CategoryName { get; set; } = string.Empty;
 }
