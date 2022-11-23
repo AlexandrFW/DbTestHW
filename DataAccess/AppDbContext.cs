@@ -9,11 +9,11 @@ internal class AppDbContext : DbContext
 {
     static bool _isDatabaseCreated = false;
 
-    DbSet<UserDto> Users { get; set; }
+    public DbSet<UserDto> Users { get; set; }
 
-    DbSet<AnnouncementDto> Announcements { get; set; }
+    public DbSet<AnnouncementDto> Announcements { get; set; }
 
-    DbSet<CategoryDto> Categories { get; set; }
+    public DbSet<CategoryDto> Categories { get; set; }
 
     public AppDbContext() { }
 
