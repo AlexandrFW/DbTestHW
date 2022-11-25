@@ -1,15 +1,18 @@
 ﻿using DbTestHW.Domain;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace DbTestHW.DataAccess.Dto;
 
 internal class AnnouncementDto
 {
-    public int UserId { get; set; }
-
-    public UserDto? User { get; set; }
+    [Key]
+    [Column("AnnouncementId")]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public int AnnouncementId { get; set; }
 
     public int CategoryId { get; set; }
-
+    
     public CategoryDto? Category { get; set; }
 
     public string Title { get; set; } = string.Empty;
@@ -23,4 +26,6 @@ internal class AnnouncementDto
     public bool IsVip { get; set; } = false;
 
     public DateTime Created { get; set; } = DateTime.Now;
+
+    public ICollection<UserAnnouncementDto>? UsersAnnouncements { get; set; }
 }

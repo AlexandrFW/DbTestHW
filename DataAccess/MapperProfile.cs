@@ -12,18 +12,11 @@ internal class MapperProfile : Profile
 
         CreateMap<CategoryDto, Category>().ReverseMap();
 
-        CreateMap<AnnouncementDto, Announcement>()
-                .ForMember(ann => ann.UserName, opt => opt.MapFrom(src => src.User!.Name))
-                .ForMember(ueml => ueml.Email, opt => opt.MapFrom(src => src.User!.Email))
-                .ForMember(phn => phn.Phone, opt => opt.MapFrom(src => src.User!.Phone))
-                .ForMember(cat => cat.CategoryName, opt => opt.MapFrom(src => src.Category!.CategoryName))
-                .IncludeMembers(s => s.User);
+        //CreateMap<AnnouncementDto, Announcement>()
+        //    .ForMember(dto => dto.AnnouncementId, opt => opt.MapFrom(x => x.UsersAnnouncements.Select(y => y.Announcement).ToList()));
 
-        CreateMap<Announcement, AnnouncementDto>()
-                .ForMember(ann => ann.User!.Name, opt => opt.MapFrom(src => src.UserName))
-                .ForMember(ueml => ueml.User!.Email, opt => opt.MapFrom(src => src.Email))
-                .ForMember(phn => phn.User!.Phone, opt => opt.MapFrom(src => src.Phone))
-                .ForMember(cat => cat.Category!.CategoryName, opt => opt.MapFrom(src => src.CategoryName))
-                .ForMember(prc => prc.Price, opt => opt.MapFrom(src => src.Price));
+        //CreateMap<List<AnnouncementDto>, List<Announcement>>();
+
+        CreateMap<UserAnnouncementDto, UserAnnouncement>().ReverseMap();
     }
 }

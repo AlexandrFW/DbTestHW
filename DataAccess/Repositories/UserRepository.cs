@@ -19,11 +19,12 @@ internal class UserRepository : IRepository<User>
     public User AddItem(User item)
     {
         var user = _mapper.Map<UserDto>(item);
-        var userId = _appDbContext.Users.Add(user);
 
-        _appDbContext.SaveChangesAsync();
+        _appDbContext.Users.Add(user);
 
-        return GetById(userId.Entity.UserId);
+        _appDbContext.SaveChanges();
+
+        return GetById(user.UserId);
     }
 
     public void DeleteItem(int id)

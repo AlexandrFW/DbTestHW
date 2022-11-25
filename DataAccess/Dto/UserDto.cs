@@ -27,5 +27,5 @@ internal class UserDto
     [Required]
     public string Password { get; set; } = string.Empty;
 
-    public ICollection<AnnouncementDto>? Announcements { get; set; }
+    public ICollection<UserAnnouncementDto>? UsersAnnouncements { get; set; }
 }
